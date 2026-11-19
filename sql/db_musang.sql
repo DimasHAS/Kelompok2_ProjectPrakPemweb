@@ -3,7 +3,6 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 02, 2025 at 12:40 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -11,37 +10,40 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ngajar24_latres_web-if-f`
+-- Database: `db_musang`
 --
+CREATE DATABASE IF NOT EXISTS `db_musang` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `db_musang`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `roti`
+-- Table structure for table `musang`
 --
 
-CREATE TABLE `roti` (
-  `id_roti` int(11) NOT NULL,
-  `nama_roti` varchar(100) NOT NULL,
-  `jenis_roti` varchar(100) NOT NULL,
+CREATE TABLE `musang` (
+  `id_musang` int(11) NOT NULL,
+  `nama_musang` varchar(100) NOT NULL,
+  `jenis_musang` varchar(100) NOT NULL,
   `harga` int(11) NOT NULL,
   `status` varchar(20) NOT NULL DEFAULT 'Tersedia',
   `gambar_url` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `roti`
+-- Dumping data for table `musang`
 --
 
-INSERT INTO `roti` (`id_roti`, `nama_roti`, `jenis_roti`, `harga`, `status`, `gambar_url`) VALUES
-(3, 'Roti Tawar Sehat', 'Roti Tawar', 8000, 'Habis', 'https://images.unsplash.com/photo-1598373182133-52452f7691ef');
+INSERT INTO `musang` (`id_musang`, `nama_musang`, `jenis_musang`, `harga`, `status`, `gambar_url`) VALUES
+(1, 'Musang Pandan Jinak Total (4 Bulan)', 'Musang Pandan', 450000, 'Tersedia', 'https://images.unsplash.com/photo-1615963244664-5b845b2025ee'),
+(2, 'Musang Bulan Jantan Sehat', 'Musang Bulan', 1250000, 'Tersedia', 'https://images.unsplash.com/photo-1548802673-380ab8ebc7b7'),
+(3, 'Musang Rase Baby', 'Musang Rase', 300000, 'Terjual', 'https://images.unsplash.com/photo-1589656966895-2f33e7653819');
 
 -- --------------------------------------------------------
 
@@ -61,17 +63,17 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `username`, `password`, `created_at`) VALUES
-(1, '123', '$2y$10$3k7GWhYoQ6c9Vc1VFSg39ukGiMHhxEuFMZXaj4hIk7RWINekYPuGy', '2025-11-02 16:01:23');
+(1, '123', '$2y$10$3k7GWhYoQ6c9Vc1VFSg39ukGiMHhxEuFMZXaj4hIk7RWINekYPuGy', '2026-11-19 18:00:00');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `roti`
+-- Indexes for table `musang`
 --
-ALTER TABLE `roti`
-  ADD PRIMARY KEY (`id_roti`);
+ALTER TABLE `musang`
+  ADD PRIMARY KEY (`id_musang`);
 
 --
 -- Indexes for table `users`
@@ -84,10 +86,10 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `roti`
+-- AUTO_INCREMENT for table `musang`
 --
-ALTER TABLE `roti`
-  MODIFY `id_roti` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `musang`
+  MODIFY `id_musang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
