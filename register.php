@@ -41,8 +41,8 @@ $status = $_GET['status'] ?? '';
           <input type="password" class="form-control" id="password" name="password" required>
         </div>
         <div class="mb-3">
-          <label for="password" class="form-label">konfirmasi password</label>
-          <input type="password" class="form-control" id="password" name="password" required>
+          <label for="konfirmasi_password" class="form-label">Konfirmasi password</label>
+          <input type="password" class="form-control" id="konfirmasi_password" name="konfirmasi_password" required>
         </div>
         <button type="submit" class="btn btn-primary w-100" name="register">Register</button>
       </form>

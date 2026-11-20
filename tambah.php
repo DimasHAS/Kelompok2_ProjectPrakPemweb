@@ -1,5 +1,5 @@
 <?php
-require "config/session_protect.php";
+require "components/session_protect.php";
 require "components/components.php";
 ?>
 
